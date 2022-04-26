@@ -43,3 +43,38 @@
 .header-nav-item a:hover {
     color: #144673;
 }
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    display: none;
+    color: #1A6FBC;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+@media screen and (max-width:767px) {
+    .nav-ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav-ul.show {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+        margin-left: 350px;
+    }
+}
